@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+  int a;
+    
+         
+  printf("digite um numero:");
+       scanf ("%i", &a);
+    
+      printf("o dobro de %i e %i e o triplo e %i",a, a *2, a * 3);
+  
+}
+
