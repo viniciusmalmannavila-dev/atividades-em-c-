@@ -1,0 +1,49 @@
+using System;
+
+class Program {
+    static void Main() {
+        // Exibição do Menu
+        Console.WriteLine("--- MENU DA LANCHONETE ---");
+        Console.WriteLine("1. Hambúrguer   - R$ 15,00");
+        Console.WriteLine("2. Cheeseburger - R$ 18,00");
+        Console.WriteLine("3. Batata Frita - R$ 10,00");
+        Console.WriteLine("4. Refrigerante - R$ 5,00");
+        Console.WriteLine("--------------------------");
+
+        Console.Write("Digite o código do item: ");
+        int codigo = int.Parse(Console.ReadLine());
+
+        Console.Write("Digite a quantidade: ");
+        int quantidade = int.Parse(Console.ReadLine());
+
+        double precoUnitario = 0;
+        bool codigoValido = true;
+
+        // Seleção do preço com base no código
+        switch (codigo) {
+            case 1:
+                precoUnitario = 15.00;
+                break;
+            case 2:
+                precoUnitario = 18.00;
+                break;
+            case 3:
+                precoUnitario = 10.00;
+                break;
+            case 4:
+                precoUnitario = 5.00;
+                break;
+            default:
+                Console.WriteLine("Erro: Código de item inválido!");
+                codigoValido = false;
+                break;
+        }
+
+        // Cálculo e exibição apenas se o código for correto
+        if (codigoValido) {
+            double total = precoUnitario * quantidade;
+            Console.WriteLine("--------------------------");
+            Console.WriteLine($"Total a pagar: R$ {total:F2}");
+        }
+    }
+}
