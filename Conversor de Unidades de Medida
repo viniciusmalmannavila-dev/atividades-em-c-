@@ -1,0 +1,35 @@
+using System;
+
+class Program {
+    static void Main() {
+        Console.Write("Digite o valor em metros: ");
+        double metros = double.Parse(Console.ReadLine());
+
+        Console.WriteLine("\nEscolha a conversão desejada:");
+        Console.WriteLine("1. Centímetros (cm)");
+        Console.WriteLine("2. Milímetros (mm)");
+        Console.WriteLine("3. Quilômetros (km)");
+        Console.Write("Opção: ");
+        
+        int opcao = int.Parse(Console.ReadLine());
+        double resultado;
+
+        switch (opcao) {
+            case 1:
+                resultado = metros * 100;
+                Console.WriteLine($"\n{metros}m equivale a {resultado}cm.");
+                break;
+            case 2:
+                resultado = metros * 1000;
+                Console.WriteLine($"\n{metros}m equivale a {resultado}mm.");
+                break;
+            case 3:
+                resultado = metros / 1000;
+                Console.WriteLine($"\n{metros}m equivale a {resultado}km.");
+                break;
+            default:
+                Console.WriteLine("\nErro: Opção de conversão inválida.");
+                break;
+        }
+    }
+}
