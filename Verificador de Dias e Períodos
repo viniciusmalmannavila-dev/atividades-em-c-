@@ -1,0 +1,30 @@
+using System;
+
+class Program {
+    static void Main() {
+        Console.Write("Digite um número de 1 a 7 (1=Dom, 2=Seg... 7=Sáb): ");
+        int dia = int.Parse(Console.ReadLine());
+
+        switch (dia) {
+            // Casos agrupados para Final de Semana
+            case 1:
+            case 7:
+                Console.WriteLine("Final de Semana! Momento de descansar.");
+                break;
+
+            // Casos agrupados para Dia Útil (Fall-through)
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+                Console.WriteLine("Dia Útil. Hora de trabalhar/estudar!");
+                break;
+
+            // Tratamento de entrada fora do intervalo 1-7
+            default:
+                Console.WriteLine("Erro: Número inválido! Digite um valor entre 1 e 7.");
+                break;
+        }
+    }
+}
