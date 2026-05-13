@@ -1,0 +1,9 @@
+let utilizador;
+
+utilizador = prompt("adimin ? (s/n)");
+
+if(utilizador == "s"){
+    console.log("Bem-vindo, administrador!");
+}else{
+    console.log("Bem-vindo, utilizador comum!");
+}
