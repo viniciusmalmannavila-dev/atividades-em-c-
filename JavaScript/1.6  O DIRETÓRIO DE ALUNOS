@@ -1,0 +1,31 @@
+// 1. Criando o array turma com 3 alunos
+const turma = [
+  {
+    nome: "Ana",
+    nota: 8.5,
+    verificarSituacao: function () {
+      return this.nota >= 6 ? "Aprovado" : "Recuperação";
+    }
+  },
+  {
+    nome: "Bruno",
+    nota: 4.0,
+    verificarSituacao: function () {
+      return this.nota >= 6 ? "Aprovado" : "Recuperação";
+    }
+  },
+  {
+    nome: "Carla",
+    nota: 7.0,
+    verificarSituacao: function () {
+      return this.nota >= 6 ? "Aprovado" : "Recuperação";
+    }
+  }
+];
+
+// 3. Percorrendo o array com forEach()
+turma.forEach(aluno => {
+  console.log(
+    `Aluno: ${aluno.nome} - Nota: ${aluno.nota} - Status: ${aluno.verificarSituacao()}`
+  );
+});
