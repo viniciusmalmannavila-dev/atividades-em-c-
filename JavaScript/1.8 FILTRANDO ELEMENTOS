@@ -1,0 +1,29 @@
+// 1. Criando o array catalogo com 4 filmes
+const catalogo = [
+  {
+    titulo: "Toy Story",
+    genero: "Animação",
+    idadeMinima: 0
+  },
+  {
+    titulo: "Procurando Nemo",
+    genero: "Animação",
+    idadeMinima: 0
+  },
+  {
+    titulo: "Deadpool",
+    genero: "Ação/Comédia",
+    idadeMinima: 18
+  },
+  {
+    titulo: "Jogos Mortais",
+    genero: "Terror",
+    idadeMinima: 18
+  }
+];
+
+// 3. Criando um novo array apenas com filmes livres
+const listaInfantil = catalogo.filter(filme => filme.idadeMinima === 0);
+
+// 4. Exibindo a lista infantil no console
+console.log(listaInfantil);
